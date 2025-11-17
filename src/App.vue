@@ -1,13 +1,15 @@
 <template>
   <v-app>
     <v-app-bar height="100" app fixed color="primary" dark>
-      <v-img
-        src="/images/logo.png"
-        contain
-        max-height="150"
-        max-width="200"
-        class="mr-3"
-      />
+      <div class="d-flex align-center">
+        <v-img
+          src="/images/logo.png"
+          contain
+          width="200"
+          height="150"
+          class="mr-3 mt-10"
+        />
+      </div>
     </v-app-bar>
 
     <v-main>
