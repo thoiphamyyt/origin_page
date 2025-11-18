@@ -1,16 +1,16 @@
 <template>
-  <v-card class="pa-4 mt-4" outlined>
-    <div class="d-flex justify-space-between">
-      <span class="label">Monthly amount</span>
-      <span class="amount">${{ monthly.toLocaleString() }}</span>
+  <v-card class="mt-4" outlined>
+    <div class="d-flex justify-space-between pa-5">
+      <span class="monthly">Monthly amount</span>
+      <span class="amount-text">${{ monthly.toLocaleString() }}</span>
     </div>
 
-    <p class="note mt-3">
-      You're planning <strong>{{ months }}</strong> monthly deposits to reach
+    <div class="planning pa-5">
+      You're planning <strong>{{ months }} monthly deposits</strong> to reach
       your <strong>${{ amount.toLocaleString() }}</strong> goal by
       <strong>{{ reachFormatted }}</strong
       >.
-    </p>
+    </div>
   </v-card>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <v-dialog v-model="localShow" max-width="450px" persistent>
-    <v-card class="pa-4" elevation="6" shaped>
+    <v-card class="pa-4 card-dialog" elevation="6" shaped>
       <div class="text-center mb-4">
         <v-avatar size="64" class="green lighten-1">
           <v-icon dark size="36">mdi-check</v-icon>
@@ -16,15 +16,15 @@
       <v-card-text class="text-center">
         <p class="mb-2">
           <strong>Total amount: </strong>
-          <span class="text-primary"> {{ total }} </span>
+          <span class="text-primary text-value"> {{ total }} </span>
         </p>
         <p class="mb-2">
           <strong>Reach goal by: </strong>
-          <span class="text-primary"> {{ reach }} </span>
+          <span class="text-primary text-value"> {{ reach }} </span>
         </p>
         <p class="mb-0">
           <strong>Monthly amount: </strong>
-          <span class="text-primary"> {{ monthly }} </span>
+          <span class="text-primary text-value"> {{ monthly }} </span>
         </p>
       </v-card-text>
 
@@ -65,6 +65,9 @@ export default {
 </script>
 
 <style scoped>
+.headline {
+  font-family: "WorkSans";
+}
 .v-card {
   border-radius: 16px;
 }
@@ -80,5 +83,8 @@ export default {
 
 .v-avatar {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.text-value {
+  font-size: 18px;
 }
 </style>

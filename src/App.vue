@@ -1,14 +1,8 @@
 <template>
   <v-app>
-    <v-app-bar height="100" app fixed color="primary" dark>
+    <v-app-bar app fixed color="white">
       <div class="d-flex align-center">
-        <v-img
-          src="/images/logo.png"
-          contain
-          width="200"
-          height="150"
-          class="mr-3 mt-10"
-        />
+        <v-img src="/images/logoOrigin.png" contain class="ml-3" />
       </div>
     </v-app-bar>
 

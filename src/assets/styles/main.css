@@ -1,0 +1,242 @@
+@font-face {
+  font-family: "WorkSans";
+  src: url("../fonts/WorkSans-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-VariableFont_wght.ttf") format("truetype");
+}
+
+:root {
+  --font-sans: "WorkSans", sans-serif;
+  --font-rubik: "Rubik", sans-serif;
+  --color-primary: #1b31a8;
+  --color-primary-dark: #062eb1;
+  --color-text: #1b1c1d;
+  --color-muted: #6c7074;
+  --color-accent: #0d8ef7;
+  --color-border: #dce3eb;
+  --radius-card: 10px;
+  --radius-btn: 100px;
+}
+
+/* ==================== GLOBAL & VUETIFY OVERRIDE ==================== */
+.v-application {
+  font-family: "Aptos", sans-serif !important;
+}
+.v-sheet.v-toolbar {
+  box-shadow: none !important;
+}
+
+.v-text-field--outlined fieldset {
+  border-color: var(--color-border) !important;
+}
+.v-text-field--enclosed .v-text-field__details,
+.v-text-field--enclosed:not(.v-text-field--rounded)
+  > .v-input__control
+  > .v-input__slot {
+  padding: 9px 12px !important;
+}
+.v-text-field--enclosed.v-input--dense:not(
+    .v-text-field--solo
+  ).v-text-field--outlined
+  .v-input__prepend-inner {
+  margin-top: 3px !important;
+}
+
+.theme--light.v-input input,
+.theme--light.v-input textarea {
+  color: rgba(78, 78, 78, 0.87) !important;
+}
+
+/* ==================== LAYOUT ==================== */
+.page-wrapper {
+  background: #f4f8fb;
+  min-height: calc(100vh - 64px);
+}
+
+@media (min-width: 960px) {
+  .page-wrapper {
+    padding: 0;
+  }
+}
+
+.main-card {
+  width: 100%;
+  max-width: 100%;
+  border-radius: var(--radius-card);
+  background: white;
+}
+
+/* Desktop: giới hạn chiều rộng */
+@media (min-width: 960px) {
+  .main-card {
+    max-width: 500px !important;
+    margin: 0 auto;
+  }
+}
+
+/* ==================== TYPOGRAPHY ==================== */
+.page-title {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--color-primary);
+  text-align: center;
+}
+@media (min-width: 960px) {
+  .page-title {
+    font-size: 20px;
+  }
+}
+
+.highlight {
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
+.goal-title {
+  font-family: var(--font-rubik);
+  font-weight: bold;
+  font-size: 20px;
+  color: #1a3146;
+}
+@media (min-width: 960px) {
+  .goal-title {
+    font-size: 24px;
+  }
+}
+
+.goal-sub {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--color-muted);
+}
+@media (min-width: 960px) {
+  .goal-sub {
+    font-size: 15px;
+  }
+}
+
+.label {
+  display: block;
+  margin-bottom: 4px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: var(--color-text);
+}
+@media (min-width: 960px) {
+  .label {
+    font-size: 14px;
+  }
+}
+
+/* ==================== COMPONENTS ==================== */
+.confirm {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.confirm-btn {
+  width: 100% !important;
+  max-width: 320px;
+  background: var(--color-primary) !important;
+  color: white !important;
+  border-radius: var(--radius-btn) !important;
+  font-weight: bold !important;
+  text-transform: unset !important;
+  font-size: 16px !important;
+  height: 48px !important;
+}
+
+/* Desktop: button nhỏ lại */
+@media (min-width: 960px) {
+  .confirm-btn {
+    width: 320px !important;
+  }
+}
+
+/* Custom input style */
+.custom-input .v-input__slot {
+  font-family: var(--font-rubik);
+  font-weight: 500;
+  font-size: 20px;
+}
+@media (min-width: 960px) {
+  .custom-input .v-input__slot {
+    font-size: 24px;
+  }
+}
+.custom-input.v-input--is-focused .v-input__slot {
+  border-color: #ff5722 !important;
+  box-shadow: 0 0 0 2px rgba(255, 87, 34, 0.2) !important;
+}
+
+/* Amount display */
+.amount-text {
+  font-family: var(--font-rubik);
+  font-weight: 500;
+  font-size: 24px;
+  color: var(--color-accent);
+}
+@media (min-width: 960px) {
+  .amount-text {
+    font-size: 32px;
+  }
+}
+
+.planning {
+  background: #f4f8fa;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  text-align: center;
+  padding: 8px;
+  border-radius: 4px;
+}
+@media (min-width: 960px) {
+  .planning {
+    text-align: left;
+  }
+}
+
+.monthly {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 960px) {
+  .monthly {
+    font-size: 20px;
+  }
+}
+
+/* Date box */
+.date-box {
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 180px;
+  background: white;
+  cursor: pointer;
+}
+.date-text {
+  font-family: var(--font-sans);
+  font-size: 14px;
+}
+@media (min-width: 960px) {
+  .date-text {
+    font-size: 16px;
+  }
+}
+.month-text {
+  font-weight: 600;
+}
+.year-text {
+  font-weight: 400;
+}

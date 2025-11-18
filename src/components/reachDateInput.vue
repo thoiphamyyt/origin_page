@@ -12,7 +12,8 @@
     >
       <template #activator="{ on, attrs }">
         <div class="date-text" v-bind="attrs" v-on="on">
-          {{ monthName }} {{ year }}
+          <span class="month-text"> {{ monthName }} </span>
+          <span class="year-text"> {{ year }} </span>
         </div>
       </template>
 
@@ -88,28 +89,9 @@ export default {
       this.$emit("input", str);
     },
     allowedFutureMonths(date) {
-      // date dạng YYYY-MM
       const today = new Date().toISOString().substring(0, 7); // YYYY-MM
-      return date > today; // chỉ allow tháng tương lai
+      return date > today;
     },
   },
 };
 </script>
-
-<style scoped>
-.date-box {
-  border: 1px solid #dce3eb;
-  border-radius: 8px;
-  padding: 6px 12px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-width: 180px;
-  background: #fff;
-}
-.date-text {
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-}
-</style>

@@ -1,5 +1,16 @@
 <template>
-  <v-text-field v-model="amount" outlined dense @input="handleInput" />
+  <v-text-field
+    v-model="amount"
+    outlined
+    hide-details="auto"
+    dense
+    @input="handleInput"
+    class="custom-input"
+  >
+    <template #prepend-inner>
+      <v-icon>mdi-currency-usd</v-icon>
+    </template>
+  </v-text-field>
 </template>
 
 <script>
