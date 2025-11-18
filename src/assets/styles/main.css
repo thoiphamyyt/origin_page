@@ -68,7 +68,6 @@
   background: white;
 }
 
-/* Desktop: giới hạn chiều rộng */
 @media (min-width: 960px) {
   .main-card {
     max-width: 500px !important;
@@ -149,7 +148,6 @@
   height: 48px !important;
 }
 
-/* Desktop: button nhỏ lại */
 @media (min-width: 960px) {
   .confirm-btn {
     width: 320px !important;
