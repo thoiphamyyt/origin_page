@@ -5,6 +5,7 @@
     hide-details="auto"
     dense
     @input="handleInput"
+    @keydown="onlyNumber"
     class="custom-input"
   >
     <template #prepend-inner>
@@ -32,6 +33,23 @@ export default {
     handleInput(val) {
       const clean = val.replace(/[^\d]/g, "");
       this.$emit("input", Number(clean));
+    },
+    onlyNumber(e) {
+      const allowedKeys = [
+        "Backspace",
+        "Delete",
+        "Tab",
+        "Escape",
+        "Enter",
+        "ArrowLeft",
+        "ArrowRight",
+      ];
+
+      if (allowedKeys.includes(e.key)) return;
+
+      if (!/^[0-9]$/.test(e.key)) {
+        e.preventDefault();
+      }
     },
   },
 };
