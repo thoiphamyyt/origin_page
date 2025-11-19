@@ -16,16 +16,17 @@
   --color-muted: #6c7074;
   --color-accent: #0d8ef7;
   --color-border: #dce3eb;
-  --radius-card: 10px;
   --radius-btn: 100px;
 }
 
 /* ==================== GLOBAL & VUETIFY OVERRIDE ==================== */
-.v-application {
-  font-family: "Aptos", sans-serif !important;
-}
 .v-sheet.v-toolbar {
   box-shadow: none !important;
+}
+
+.v-sheet.v-card {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important;
+  border-radius: 8px !important;
 }
 
 .v-text-field--outlined fieldset {
@@ -64,7 +65,6 @@
 .main-card {
   width: 100%;
   max-width: 100%;
-  border-radius: var(--radius-card);
   background: white;
 }
 
